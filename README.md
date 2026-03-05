@@ -2,18 +2,18 @@
 
 Next.js App Router demo that simulates a multi-blog platform with subfolder routing, middleware-based domain mapping, SSR SEO metadata, and performance-aware component loading.
 
+## Live Vercel Link
+
+`https://hyperblog-phi.vercel.app/`
+
 ## GitHub Repository Link
 
-Add your repository URL here after pushing:
-
-`https://github.com/<your-username>/<your-repo>`
+`https://github.com/Abhi8099/hyperblog`
 
 ## Run Locally
 
-```bash
 npm install
 npm run dev
-```
 
 Open `http://localhost:3000`.
 
@@ -26,7 +26,7 @@ Open `http://localhost:3000`.
 
 ## Rendering Choice
 
-- **Blog pages use SSR** (Server Components + server-side data fetch through `/api/blog`).
+- Blog pages use SSR (Server Components + server-side data fetch through `/api/blog`).
 - This keeps blog content and metadata in the server HTML, which is useful for crawlability and predictable SEO output.
 - The non-critical insights widget is client-only and loaded lazily.
 
@@ -61,7 +61,7 @@ File: `middleware.ts`
 - Rewrites `/` internally to the mapped blog route.
 - Also rewrites `/api/blog` if no slug is provided.
 
-### Header Test Example
+## Header Test Example
 
 ```bash
 curl -H "x-blog-domain: tech" http://localhost:3000/
